@@ -28,3 +28,19 @@ each with its own `build.py` and `NOTES.md`; finished EPUBs land in `dist/`.
 Tools: pandoc (`brew install pandoc`), epubcheck (`brew install epubcheck`),
 Python 3 (stdlib only). Calibre is not required, but useful for previewing
 and for converting onward to Kindle formats.
+
+## Licence
+
+Two different things live in this repository:
+
+- **The texts** in `*/source/` and `dist/` are not ours. *Bahá’í Sacred
+  Writings* is Copyright © Bahá’í International Community and is used here
+  under the terms at <https://www.bahai.org/legal>: the copyright notice must
+  accompany any use, the meaning of the text must remain unaltered, and
+  commercial use requires their prior permission. This is an unofficial
+  rendering, not endorsed by the Bahá’í International Community. If you
+  represent the copyright holder and have any concern, open an issue and the
+  file will be taken down promptly.
+- **Everything else** (build scripts, stylesheets, notes, and this README) is
+  dedicated to the public domain under [CC0 1.0](LICENSE). Use it however you
+  like; no attribution required.
