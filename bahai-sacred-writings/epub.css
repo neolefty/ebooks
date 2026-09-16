@@ -1,0 +1,10 @@
+body { line-height: 1.5; }
+h1, h2, h3 { text-align: center; font-weight: normal; page-break-after: avoid; }
+h1 { font-size: 1.6em; margin: 2em 0 1em; }
+h1.part { margin-top: 30%; }
+h2 { font-size: 1.4em; margin: 1.5em 0 1em; }
+h3 { font-size: 1.15em; font-style: italic; margin: 1.5em 0 0.6em; }
+p { margin: 0; text-indent: 1.5em; text-align: justify; }
+h1 + p, h2 + p, h3 + p { text-indent: 0; }
+.pnum { font-size: 0.75em; color: #777; margin-right: 0.5em; vertical-align: 0.25em; }
+h1.colophon + p, h1.colophon ~ p { text-indent: 0; margin-bottom: 0.8em; }
