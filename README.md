@@ -44,3 +44,9 @@ Two different things live in this repository:
 - **Everything else** (build scripts, stylesheets, notes, and this README) is
   dedicated to the public domain under [CC0 1.0](LICENSE). Use it however you
   like; no attribution required.
+
+## Credits
+
+Built by Bill Baker with [Claude Code](https://claude.com/claude-code)
+(Claude Fable 5.1), which investigated the source formats, wrote the build
+pipeline and verification, and drafted these notes.
