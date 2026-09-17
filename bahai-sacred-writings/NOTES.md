@@ -65,9 +65,19 @@ changes their markup the build fails loudly instead of losing text.
 - `epub.css`: centred headings, indented justified paragraphs, small grey
   passage numbers.
 
+## Cover
+
+The source has no cover image, so `cover.py` generates one with ImageMagick
+and `build.py` passes it to pandoc as `--epub-cover-image`. Design follows
+the 2026 hardcover: dark blue linen, gold serif capitals, no author (the
+title page inside credits both Bahá’u’lláh and ‘Abdu’l‑Bahá). The title is
+stacked one word per line and set large so it survives as a thumbnail.
+Font: macOS's bundled Hoefler Text; pass another font path as an argument
+to `cover.py` on other systems. Noise seeds are fixed so rebuilds are
+byte-identical.
+
 ## Ideas for refinement
 
-- A cover image (pandoc `--epub-cover-image`); none exists at the source.
 - Two-level TOC only (`--toc-depth=2`) if 152 entries feels too busy on a
   reader; the h3 sections stay in the text either way.
 - Kindle: `ebook-convert dist/Bahai-Sacred-Writings.epub out.azw3` with Calibre.

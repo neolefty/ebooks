@@ -18,6 +18,8 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+import cover
+
 HERE = Path(__file__).resolve().parent
 SOURCE_PAGE = "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/"
 SOURCE_URL = SOURCE_PAGE + "bahai-sacred-writings.xhtml"
@@ -167,8 +169,9 @@ def main():
         raise SystemExit(f"passage count mismatch: source {src_passages}, output {stats['passages']}")
     print("structure:", stats)
 
+    cover_image = cover.main()
     cmd = [
-        "pandoc", str(CLEAN), "-f", "html", "-t", "epub3", "-o", str(OUT),
+        "pandoc", str(CLEAN), "--epub-cover-image", str(cover_image), "-f", "html", "-t", "epub3", "-o", str(OUT),
         "--metadata-file", str(HERE / "metadata.yaml"),
         "--metadata", f"date={iso_date(meta.get('last-modified', ''))}",
         "--css", str(HERE / "epub.css"),
